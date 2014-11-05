@@ -65,6 +65,25 @@ void meArm::begin(int pinBase, int pinShoulder, int pinElbow, int pinGripper) {
   openGripper();
 }
 
+void meArm::begin(
+      int pinBase, int minBase, int maxBase,
+      int pinShoulder, int minShoulder, int maxShoulder,
+      int pinElbow, int minElbow, int maxElbow,
+      int pinGripper int minGripper, int maxGripper
+    ) {
+  _pinBase = pinBase;
+  _pinShoulder = pinShoulder;
+  _pinElbow = pinElbow;
+  _pinGripper = pinGripper;
+  _base.attach(_pinBase, minBase, maxBase);
+  _shoulder.attach(_pinShoulder, minShoulder, maxShoulder);
+  _elbow.attach(_pinElbow, minElbow, maxElbow);
+  _gripper.attach(_pinGripper, minGripper, maxGripper);
+
+  goDirectlyTo(0, 100, 50);
+  openGripper();
+}
+
 //Set servos to reach a certain point directly without caring how we get there 
 void meArm::goDirectlyTo(float x, float y, float z) {
   float radBase,radShoulder,radElbow;
