@@ -36,7 +36,7 @@ class meArm {
       int pinBase, int minBase, int maxBase,
       int pinShoulder, int minShoulder, int maxShoulder,
       int pinElbow, int minElbow, int maxElbow,
-      int pinGripper int minGripper, int maxGripper
+      int pinGripper, int minGripper, int maxGripper
     );
     //Travel smoothly from current point to another point
     void gotoPoint(float x, float y, float z);

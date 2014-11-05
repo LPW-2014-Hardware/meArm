@@ -69,7 +69,7 @@ void meArm::begin(
       int pinBase, int minBase, int maxBase,
       int pinShoulder, int minShoulder, int maxShoulder,
       int pinElbow, int minElbow, int maxElbow,
-      int pinGripper int minGripper, int maxGripper
+      int pinGripper, int minGripper, int maxGripper
     ) {
   _pinBase = pinBase;
   _pinShoulder = pinShoulder;
